@@ -1,10 +1,10 @@
 apiVersion: v2
 name: cloudlaunch
-version: 0.4.0
+version: 0.5.0
 appVersion: "2.0.2"
 description: A Helm chart for CloudLaunch, including the server and web UI
 home: http://cloudlaunch.cloudve.org/
 dependencies:
     - name: cloudlaunchserver
       repository: https://raw.githubusercontent.com/CloudVE/helm-charts/master
-      version: 0.4.0
+      version: 0.5.0
