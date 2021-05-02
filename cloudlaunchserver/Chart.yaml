@@ -1,5 +1,14 @@
+apiVersion: v2
 name: cloudlaunchserver
 version: 0.4.0
+appVersion: "2.0.2"
 description: A Helm chart for the CloudLaunch server/api component
 home: http://cloudlaunch.cloudve.org/
-appVersion: 2.0.2
+dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.8.7
+    - name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.38.2
+      alias: rabbitmq
