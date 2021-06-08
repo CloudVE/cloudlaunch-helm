@@ -38,11 +38,11 @@ data:
             application/rss+xml
             image/svg+xml;
     
-        location /static/ {
+        location {{ trimSuffix "/" .Values.ingress.path }}/static/ {
             alias   /usr/share/nginx/html/static/;
         }
     
-        location / {
+        location {{ trimSuffix "/" .Values.ingress.path }}/ {
             alias   /usr/share/nginx/html/;
             try_files $uri @proxy /index.html =404;
         }
