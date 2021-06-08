@@ -18,6 +18,8 @@ jobs:
           charts-token: ${{ secrets.CHARTS_TOKEN }}
           github-labels: ${{ join(github.event.pull_request.labels.*.name, ', ') }}
           git-branch: ${{ github.event.pull_request.base.ref }}
+      - run: sleep 20
+        shell: bash
       - uses: cloudve/helm-ci@depbump
         with:
           chart-name: cloudlaunch
