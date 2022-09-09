@@ -20,7 +20,9 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - ~
+    - host: ~
+      paths:
+        - path: "/"
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
@@ -49,5 +51,8 @@ cloudlaunchserver:
     ingress:
         enabled: true
         path: /cloudlaunch
-
+        hosts:
+          - host: ~
+            paths:
+              - path: "/cloudlaunch"
 podAnnotations: {}
